@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/publish_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:text="0s"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <SeekBar
+            android:id="@+id/sb_top_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_end"
+            android:layout_toRightOf="@id/tv_start"
+            android:progressDrawable="@drawable/video_seekbar_bg"
+            android:thumb="@drawable/icon_progress_dot"
+            android:maxHeight="2dp"/>
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:text="30s"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_close_updated" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="返回"
+                android:visibility="gone"
+                style="@style/textView_shadow"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time_lapse"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_change_camera"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@drawable/icon_time_lapse_updated"
+            android:text="3s"
+            android:textSize="10sp"
+            android:gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_show_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="30dp"
+            android:text="主人，请带好面具再进行录制哟"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:textColor="#9E9E9E"/>
+
+        <ImageView
+            android:id="@+id/iv_change_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_change_camera_updated"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/publish_activity_content">
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/issue_page_icon_eraser"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_change_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_change_avatar"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+            <FrameLayout
+                android:id="@+id/fl_record"
+                style="@style/wrap_content_wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/iv_record"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:src="@drawable/icon_recording"
+                    android:layout_gravity="center" />
+                <com.camera.zcc.cameraface.CameraProgressBar
+                    android:id="@+id/mProgressbar"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    app:innerRadio="16px"
+                    app:isLongScale="true"
+                    app:progressWidth="2.8dp"
+                    app:outerColor="@color/transparent"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_filter2"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_preview"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <com.camera.zcc.cameraface.AnimationImageView
+        android:id="@+id/iv_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+

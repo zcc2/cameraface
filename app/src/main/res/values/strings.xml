@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">cameraface</string>
+    <string name="mianju">主人，带好你的面具后再点击录制喔</string>
+    <string name="delete_video_info">主人，你真的不要我了吗？</string>
+    <string name="cancle_publish_info">主人，你真的不发布吗？</string>
+    <string name="add_tags_info">主人，请先添加标签喔~</string>
+    <string name="delete_dialog_left">取消</string>
+    <string name="delete_dialog_right">确定</string>
+</resources>

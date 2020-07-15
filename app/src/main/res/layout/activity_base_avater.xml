@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout_parent">
+
+    <com.faceunity.fup2a.ui.AspectFrameLayout
+        android:id="@+id/avatar_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/base_avatar_select"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-210dp"
+        android:background="@color/black_11"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_choose"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/base_filter_select"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-130dp"
+        android:background="@color/black_11"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ff_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

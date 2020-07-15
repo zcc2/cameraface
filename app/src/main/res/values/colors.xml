@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="coolPurpleColor">#8c5de4</color>
+    <!--主页底部导航字体选中 -->
+    <color name="bottom_bar_select">#4a4a4a</color>
+</resources>
